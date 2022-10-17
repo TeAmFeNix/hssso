@@ -49,6 +49,13 @@ async def play(c: Client, m: Message):
     
                     InlineKeyboardButton(
                     "قناة المطور", url=f"https://t.me/Eivrr"
+                ),
+            ],
+            [
+            ]
+         ]
+     )
+  )
         replied = m.reply_to_message
         chat_id = m.chat.id
         keyboard = InlineKeyboardMarkup(
