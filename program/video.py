@@ -54,7 +54,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["فيديو", "/vplay", f"/vplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["jab", "/", f"/vplay@{BOT_USERNAME}"]) & other_filters)
 async def vplay(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
@@ -227,7 +227,7 @@ async def vplay(c: Client, m: Message):
                                     ),
                                     stream_type=StreamType().local_stream,
                                 )
-                                add_to_queue(chat_id, songname, ytlink, url, "فيديو", Q)
+                                add_to_queue(chat_id, songname, ytlink, url, "hax", Q)
                                 await loser.delete()
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
@@ -297,7 +297,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_text(f"🚫 error: `{ep}`")
 
 
-@Client.on_message(command(["مباشر", f"vstream@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["kbf", f"vstream@{BOT_USERNAME}"]) & other_filters)
 async def vstream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -426,7 +426,7 @@ async def vstream(c: Client, m: Message):
                         ),
                         stream_type=StreamType().live_stream,
                     )
-                    add_to_queue(chat_id, "Live Stream", livelink, link, "فيديو", Q)
+                    add_to_queue(chat_id, "Live Stream", livelink, link, "idh", Q)
                     await loser.delete()
                     requester = (
                         f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
